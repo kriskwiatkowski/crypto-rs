@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "hqckem",
+    "mldsa",
+    "mlkem",
+]
+resolver = "2"

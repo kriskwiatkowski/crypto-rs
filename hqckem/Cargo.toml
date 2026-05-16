@@ -1,0 +1,29 @@
+[package]
+name = "hqc"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kris Kwiatkowski"]
+description = "Hamming Quasi-Cyclic (HQC) - Post-Quantum Key Encapsulation Mechanism"
+license = "MIT"
+repository = "https://github.com/kriskwiatkowski/hqckem-edu"
+keywords = ["cryptography", "post-quantum", "kem", "code-based", "hqc"]
+categories = ["cryptography", "no-std"]
+
+[dependencies]
+sha3 = { version = "0.10", default-features = false }
+
+[dev-dependencies]
+rand_core = { version = "0.6", default-features = false }
+rand = "0.8"
+hex = "0.4"
+aes = "0.8"
+criterion = "=0.8.2"
+criterion-cycles-per-byte = "0.8.0"
+
+[features]
+default = ["std"]
+std = []
+
+[[bench]]
+name = "bench"
+harness = false

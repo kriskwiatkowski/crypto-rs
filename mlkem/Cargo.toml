@@ -1,0 +1,22 @@
+[package]
+name = "mlkem-edu"
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+repository = "https://git.amongbytes.com/AmongBytes/mlkem-edu"
+homepage = "https://git.amongbytes.com/AmongBytes/mlkem-edu"
+publish = ["amongbytes"]
+
+[dependencies]
+sha3 = "0.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+hex = "0.4.3"
+
+[dev-dependencies]
+criterion = "=0.8.2"
+criterion-cycles-per-byte = "0.8.0"
+
+[[bench]]
+name = "bench"
+harness = false
